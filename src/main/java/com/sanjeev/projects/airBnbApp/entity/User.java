@@ -3,6 +3,7 @@ package com.sanjeev.projects.airBnbApp.entity;
 import com.sanjeev.projects.airBnbApp.entity.enums.Gender;
 import com.sanjeev.projects.airBnbApp.entity.enums.Role;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
@@ -40,7 +41,6 @@ public class User implements UserDetails {
 
     @Enumerated(EnumType.STRING)
     private Gender gender;
-
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
